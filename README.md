@@ -1,2 +1,6 @@
-# FlatChannelFSI_VectorNS
-Repo for testing the use of vector Navier-Stokes kernels with FSI interface kernels in MOOSE
+FlatChannelFSI_VectorNS
+=====
+
+"Fork FlatChannelFSI_VectorNS" to create a new MOOSE-based application.
+
+For more information see: [http://mooseframework.org/create-an-app/](http://mooseframework.org/create-an-app/)

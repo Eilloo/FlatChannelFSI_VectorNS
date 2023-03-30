@@ -1,0 +1,4 @@
+app_name = flat_channel_fsi__vector_ns
+allow_warnings = false
+allow_unused = false
+allow_override = false
