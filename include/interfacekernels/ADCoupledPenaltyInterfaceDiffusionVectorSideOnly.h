@@ -3,20 +3,20 @@
 /**
  * DG kernel for interfacing diffusion between two variables on adjacent blocks
  */
-class ADCoupledPenaltyInterfaceDiffusionFieldSideOnly : public ADInterfaceKernel
+class ADCoupledPenaltyInterfaceDiffusionVectorSideOnly : public ADVectorInterfaceKernel
 {
 public:
   static InputParameters validParams();
 
-  ADCoupledPenaltyInterfaceDiffusionFieldSideOnly(const InputParameters & parameters);
+  ADCoupledPenaltyInterfaceDiffusionVectorSideOnly(const InputParameters & parameters);
 
 protected:
   virtual ADReal computeQpResidual(Moose::DGResidualType type) override;
 
   const unsigned int _dim;
   const Real _penalty;
-  const Real _component;
-  const ADVariableValue & _primary_coupled_value;
-  const ADVectorVariableValue & _secondary_coupled_vector_value;
-
+  const ADVectorVariableValue & _primary_coupled_vector_value;
+  const ADVariableValue & _secondary_coupled_value_x;
+  const ADVariableValue & _secondary_coupled_value_y;
+  const ADVariableValue & _secondary_coupled_value_z;
 };
